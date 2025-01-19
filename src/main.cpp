@@ -12,7 +12,9 @@ int main() {
         ClearBackground(BLACK);
 
         DrawText("no game yet", 960, 540, 30, WHITE);
+
+        EndDrawing();
     }
-    
+
     return 0;
 }
