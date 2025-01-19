@@ -2,6 +2,17 @@
 #include <raylib.h>
 
 int main() {
-    printf("hi guys");
+    InitWindow(1920, 1080, "RedBox");
+
+    SetTargetFPS(60);
+
+    while (!WindowShouldClose()) {
+        BeginDrawing();
+
+        ClearBackground(BLACK);
+
+        DrawText("no game yet", 960, 540, 30, WHITE);
+    }
+    
     return 0;
 }
