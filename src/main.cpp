@@ -33,9 +33,11 @@ int main() {
         if (current_layer == MainMenu) {
             ClearBackground(BLACK);
 
+            bool play_button = button("Singleplayer", 830, 380, 240, 40);
+
             DrawText("RedBox", 790, 200, 120, RED);
-            
-            if (button("Singleplayer", 830, 380, 240, 40)) {
+
+            if (play_button) {
                 current_layer = Playing;
             }
         } else if (current_layer == Playing) {
