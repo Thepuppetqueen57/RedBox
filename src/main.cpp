@@ -9,15 +9,15 @@ enum Layer {
 
 Layer current_layer = MainMenu;
 
-bool button(char* text, int x, int y, int width, int height)
-{
+bool button(char* text, int x, int y, int width, int height) {
     DrawRectangle(x,y,width,height,GRAY);
     DrawRectangleLines(x,y,width,height,WHITE);
     DrawText(text,x + 10,y + 10,20,WHITE);
-        if(GetMouseX() >= x && GetMouseX() <= x + width && GetMouseY() >= y && GetMouseY() <= y + 40 && IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
-        {
+        if (GetMouseX() >= x && GetMouseX() <= x + width && GetMouseY() >= y && GetMouseY() <= y + 40 && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
             return true;
-        } else return false;
+        } else {
+            return false;
+        }
 }
 
 int main() {
@@ -34,6 +34,7 @@ int main() {
             ClearBackground(BLACK);
 
             DrawText("RedBox", 790, 200, 120, RED);
+            
             if (button("Singleplayer", 830, 380, 240, 40)) {
                 current_layer = Playing;
             }
